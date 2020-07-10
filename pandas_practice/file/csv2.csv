@@ -1,0 +1,9 @@
+FQDN,IP_ADDRESS,SERVER,LOCATION
+device3.com,10.12.12.1,serverC,xx
+device679.com,20.3.67.1,serverA,we
+device1.com,10.10.10.1,serverA,ac
+device345.com,192.168.2.0,serverA,ad
+device2.com,192.168.6.0,serverB,af
+device2.com,192.168.6.0,serverB,af
+device2.com,192.168.6.0,serverB,af
+device2.com,192.168.6.0,serverB,af

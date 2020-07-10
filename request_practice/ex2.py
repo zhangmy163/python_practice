@@ -14,3 +14,5 @@ respose = requests.post(url,data=post_data,headers=headers)
 
 # print(respose.url)
 print(respose.json())
+
+print(respose.request.headers)

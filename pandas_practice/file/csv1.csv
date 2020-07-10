@@ -1,0 +1,4 @@
+SERVER,FQDN,IP_ADDRESS
+serverA,device1.com,10.10.10.1
+serverA,device2.com,10.11.11.1
+serverC,device3.com,10.12.12.1
