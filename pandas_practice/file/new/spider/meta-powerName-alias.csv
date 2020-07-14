@@ -1,0 +1,7 @@
+alias_styleConf,standardPowerID,standardPowerName,standardPowerCategoryID,standardPowerCategoryName
+油电混合,22,油电混合动力,2,新能源
+增程式,22,油电混合动力,2,新能源
+插电式混合动力,22,油电混合动力,2,新能源
+柴油,12,柴油动力,1,燃油动力
+纯电动,21,纯电动力,2,新能源
+汽油,11,汽油动力,1,燃油动力
