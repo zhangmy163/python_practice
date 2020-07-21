@@ -27,4 +27,5 @@ df1=pd.DataFrame([[1,2,3],[NaN,NaN,2],[NaN,NaN,NaN],[8,8,NaN]])
 print(df1)
 print("=============")
 print(df1.dropna())
+#https://blog.csdn.net/dili8870/article/details/101506554
 print(df1.dropna(how='all'))
