@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package com.auryc.ubi.core.model;
-option go_package = "inti";
-option java_package = "com.datatreker.inti";
+package model;
+option go_package = "model";
+option java_package = "com.datatreker.inti.model";
 option java_outer_classname = "MessageFactory";
 
 message Message {
@@ -17,7 +17,7 @@ message Message {
     string ref = 4; //Referer of the current user.
     string ua = 5; //Useragent of the current user.
   }
-  repeated MessageContext context = 5;
+  MessageContext context = 5;
   message MessagePacket {
     string vid = 1; //Id of the current view or scenario.
     int64 ts = 2; //UTC Timestamp of the first event belong to the current data packet.

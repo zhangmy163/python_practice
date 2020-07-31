@@ -10,17 +10,20 @@ def test_protobuf():
     :return:
     """
     req = Request()
-    req.cate_id = "xiwang"
+    req.cate_id = "xiwang1"
     req.page = 1
     req.pageSize = 10
     req_data = req.SerializeToString()
+    print(req_data)
     response = requests.post("http://127.0.0.1:8899/protobuf", data=req_data)
-
+    print("reponse==========",response)
+    # print("res.json",response[2].json())
     res = Response()
+    
     res.ParseFromString(response.content)
-    print(res)
+    print("res=============",res)
     for i in res.dataList:
-        print(i.title)
+        print("title=======",i.title)
 
 
 if __name__ == '__main__':
