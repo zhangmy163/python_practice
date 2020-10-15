@@ -32,7 +32,7 @@ with open(str(base_dir)+"/file/error.log",'rb') as f:
             li='\"\"'
             err='\"\"'
             url='\"\"'
-            other=formatstr(data["info"])
+            other=formatstr(data["info"]).replace(",",";")
             with open(str(base_dir)+"/file/error.csv",'a') as wf:
                 wf.writelines(msg+","+scr+","+li+","+err+","+url+","+other)
         else:
