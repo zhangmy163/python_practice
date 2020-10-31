@@ -25,7 +25,9 @@ url=['gv.bo338.com/search',
 def select_browser():
     print("start %s" % ctime())
     try:
-        dr = webdriver.Chrome()
+        option = webdriver.ChromeOptions()
+        option.add_argument('headless')
+        dr = webdriver.Chrome(chrome_options=option)
         return dr
     except Exception as msg:
         print("启动浏览器出现异常：%s" % str(msg))
@@ -34,9 +36,12 @@ def test_open(n):
     driver = select_browser()
     driver.maximize_window()
     driver.get("http://"+str(url[n]))
-    sleep(1000)
-    print(driver.title)
-    # driver.quit()
+    cookie = driver.get_cookies()
+    print("=======cookie=======")
+    print(cookie)
+    sleep(10)
+    # print(driver.title)
+    driver.quit()
     print("end %s" % n, ctime())
 
 def thread_browser(*args):
@@ -55,3 +60,4 @@ def thread_browser(*args):
         
 if __name__ == "__main__":
      thread_browser(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17)
+    # thread_browser(0,1,2)
