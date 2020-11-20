@@ -27,7 +27,8 @@ class HttpFilter:
         # print("lastPath====",flow.request.url.split('?')[0].split('/')[-1])
 
         if( 'google-analytics' in url and "collect" in url and scode == 200 ):
-            logger.info("GA code====: "+url)
+            if('event' in url or 'pageview' in url):
+                logger.info("GA code====: "+url)
         if( 'cachi.cigdata' in url and 'event' in url and scode == 202 ):
             logger.info("CIGA code====: "+url)
  
