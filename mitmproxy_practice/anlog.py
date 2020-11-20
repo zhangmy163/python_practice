@@ -12,10 +12,10 @@ with open(logfile, 'r') as f:
             if '- GA code' in l:
                 ganum = ganum +1
                 # print('ganum:'+str(ganum))
-                if ganum > 1:
-                    print('GA代码响应超过1,目前为'+str(ganum)+'=='+url)
+                if ganum != 1:
+                    print('GA代码响应不为1,目前为'+str(ganum)+'=='+url)
             if '- CIGA code' in l:
                 ciganum = ciganum +1
                 # print('ciganum:'+str(ciganum))
-                if ciganum > 1:
-                    print('CIGA代码响应超过1,目前为'+str(ciganum)+'=='+url)
+                if ciganum != 1:
+                    print('CIGA代码响应不为1,目前为'+str(ciganum)+'=='+url)
