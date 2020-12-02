@@ -40,7 +40,7 @@ def CheckPV(url):
     driver.quit()
 
 if __name__ == "__main__":
-    checkfile=str(base_dir)+"/file/dyk-all.csv"
+    checkfile=str(base_dir)+"/file/nissa-ciga-null.csv"
     with open(checkfile, 'r') as f:
         urls = f.readlines()
         for url in urls:
