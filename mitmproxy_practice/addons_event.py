@@ -28,14 +28,10 @@ class HttpFilter:
         # print("lastPath====",flow.request.url.split('?')[0].split('/')[-1])
 
         if( 'google-analytics' in url and "collect" in url and scode == 200 ):
-            if('pageview' in url):
-                logger.info("GA pageview code====: "+url)
             if('event' in url):
                 logger.info("GA event code====: "+url)
         if( 'cachi.cigdata' in url and 'event' in url and scode == 202 ):
-            if('et\":18}' in text):
-                logger.info("CIGA pageview code====: "+url)
-            if('et\":15}' in text):
+            if(':15}' in text):
                 logger.info("CIGA event code====: "+url)
  
 addons = [

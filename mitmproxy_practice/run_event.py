@@ -31,7 +31,14 @@ def initDriver(t):
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
         driver = webdriver.Chrome(chrome_options=options)
     elif(t=="normal"):
-        driver = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        # 忽略https警告
+        options.add_argument('--ignore-certificate-errors')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--disable-cache')
+        options.add_argument('--proxy-server={host}:{port}'.format(host="127.0.0.1", port=8080))        
+        options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        driver = webdriver.Chrome(chrome_options=options)
     return driver
 
 
@@ -43,7 +50,7 @@ def CheckPV(url):
     sleep(3)
     driver.quit()
 def CheckEvent(url,x):
-    driver=initDriver("normal")
+    driver=initDriver("headless")
     logger.info("Open url====: "+url)
     driver.get(url)
     logger.info("Click ====: "+url)
