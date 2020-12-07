@@ -1,1 +1,4 @@
-https://www.dyk.com.cn/,"//*[@code-ga=""event, C02_everypage, 全站导航点击, C02A06L09_everypage_全站导航点击_预约试驾""]"
+https://www.dyk.com.cn/,"//*[@code-ga=""event, C02_everypage, 全站导航点击, C02A06L09_everypage_全站导航点击_预约试驾""]",
+https://www.dyk.com.cn/test-drive,"//*/div[@ng-click=""submitForms()""]",
+https://www.dongfeng-nissan.com.cn/,"//*/button[@class=""open-btn""]","//*/ul[@class=""menu little""]/*/a[@href=""/buy/test-drive""]"
+https://www.dongfeng-nissan.com.cn/buy/test-drive,"//*/div[@ng-click=""submitBtn()""]",
